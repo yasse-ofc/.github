@@ -216,13 +216,13 @@ For the database, we are using [MongoDB](https://www.mongodb.com/). It's free, a
 
 1. Create an account in [MongoDB](https://www.mongodb.com/);
 2. Go to `Deployment > Database`;
-3. Go to `+Create`, then create a shared cluster hosted wherever and with any name;
+3. Go to `+Create`, then create a shared cluster hosted wherever and with any name (This name will be your `MONGODB_DB`);
 4. Create an `username` and random `password` and store them somewhere for the time being;
 5. Return to `Deployment > Database` and go to `Connect` in your DB;
 6. Select `Connect your application`;
 7. Copy the link given to you and paste it into your `MONGODB_LINK`;
 8. Change the `<password>` field to your created password;
-9. Your link should be looking like this: `mongodb+srv://<user>:<password>@cluster.p2u97.mongodb.net/?retryWrites=true&w=majority`;
+9. Your link (This will be your `MONGODB_LINK`) should be looking like this: `mongodb+srv://<user>:<password>@cluster.p2u97.mongodb.net/?retryWrites=true&w=majority`;
 10. You are ready to go.
 
 #### Yasse Crawlers
@@ -262,7 +262,7 @@ For the database, we are using [MongoDB](https://www.mongodb.com/). It's also fr
 7. Copy the link given to you and paste it into your `MONGODB_LINK`;
 8. Change the `<password>` field to your created password;
 9. Add the `&keepAlive=true` to the end of your link;
-10. Your link should be looking like this: `mongodb+srv://<user>:<password>@cluster.p2u97.mongodb.net/?retryWrites=true&w=majority&keepAlive=true`;
+10. Your link (This will be your `MONGODB_LINK`) should be looking like this: `mongodb+srv://<user>:<password>@cluster.p2u97.mongodb.net/?retryWrites=true&w=majority&keepAlive=true`;
 11. You are ready to go.
 
 #### Yasse Web
