@@ -21,6 +21,7 @@ All types of contributions are encouraged and valued. See the [Table of Contents
   - [Reporting Bugs](#reporting-bugs)
   - [Suggesting Enhancements](#suggesting-enhancements)
   - [Your First Code Contribution](#your-first-code-contribution)
+    - [How to create crawlers](#how-to-create-crawlers)
   - [Improving The Documentation](#improving-the-documentation)
 - [Styleguides](#styleguides)
   - [Code Standards](#code-standards)
@@ -162,10 +163,9 @@ Now, please:
 
 ### Your First Code Contribution
 
-<!-- TODO
-include Setup of env, IDE and typical getting started instructions?
+#### How to create crawlers
 
--->
+Refer to [this](./CRAWLER_CONTRIBUTING.md).
 
 ### Improving The Documentation
 
