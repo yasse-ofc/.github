@@ -29,6 +29,9 @@ All types of contributions are encouraged and valued. See the [Table of Contents
     - [Yasse API](#yasse-api)
     - [Yasse Crawlers](#yasse-crawlers)
     - [Yasse Web](#yasse-web)
+      - [Recommended IDE Setup](#recommended-ide-setup)
+      - [How to Compile and Hot-Reload for Development](#how-to-compile-and-hot-reload-for-development)
+      - [How to Type-Check, Compile and Minify for Production](#how-to-type-check-compile-and-minify-for-production)
   - [Commit Messages](#commit-messages)
 - [Join The Project Team](#join-the-project-team)
 - [Attribution](#attribution)
@@ -189,7 +192,7 @@ Use:
 
 If you don't have node installed, do as following:
 
-```bash
+```sh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 nvm install node
 ```
@@ -198,7 +201,7 @@ nvm install node
 
 Use the following commands to clone the rep and download all packages:
 
-```bash
+```sh
 nvm
 git clone git@github.com:yasse-ofc/yasse-api-api.git
 cd yasse-api && npm i && touch .env
@@ -229,7 +232,7 @@ For the database, we are using [MongoDB](https://www.mongodb.com/). It's free, a
 
 Use the following commands to clone the rep and download all packages:
 
-```bash
+```sh
 nvm 
 git clone git@github.com:yasse-ofc/yasse-crawlers.git
 cd yasse-crawlers && npm i && touch .env
@@ -269,10 +272,26 @@ For the database, we are using [MongoDB](https://www.mongodb.com/). It's also fr
 
 Use the following commands to clone the rep and download all packages:
 
-```bash
+```sh
 nvm 
 git clone git@github.com:yasse-ofc/yasse-web.git
 cd yasse-web && npm i
+```
+
+##### Recommended IDE Setup
+
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+
+##### How to Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+##### How to Type-Check, Compile and Minify for Production
+
+```sh
+npm run build
 ```
 
 ### Commit Messages
