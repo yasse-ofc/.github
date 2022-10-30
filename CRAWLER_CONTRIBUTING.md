@@ -2,12 +2,15 @@
 
 ## Table of Contents <!-- omit in toc -->
 
-- [How to setup your environment](#how-to-setup-your-environment)
+- [How to set up your environment](#how-to-set-up-your-environment)
 - [Find out which crawler type to use](#find-out-which-crawler-type-to-use)
+  - [Best-case scenario](#best-case-scenario)
+  - [Most common scenario](#most-common-scenario)
+  - [Worst-case scenario](#worst-case-scenario)
 - [Crawler Creation](#crawler-creation)
-  - [How to create HTTP Crawler](#how-to-create-http-crawler)
+  - [How to create an HTTP Crawler](#how-to-create-an-http-crawler)
   - [How to create Cheerio Crawler](#how-to-create-cheerio-crawler)
-  - [How to create Puppeteer Crawler](#how-to-create-puppeteer-crawler)
+  - [How to create a Puppeteer Crawler](#how-to-create-a-puppeteer-crawler)
 - [Any Questions?](#any-questions)
   - [New to Web Scraping?](#new-to-web-scraping)
   - [Crawler Framework](#crawler-framework)
@@ -17,21 +20,37 @@
     - [Puppeteer Crawler](#puppeteer-crawler)
   - [Anything else](#anything-else)
 
-## How to setup your environment
+## How to set up your environment
 
 [Described here]('./../CONTRIBUTING.md#yasse-crawlers').
 
 ## Find out which crawler type to use
 
-- Does the page use an API to gather data? **Use HTTP Crawler**
-- Is the page static? **Use Cheerio Crawler**
-- Does the page need JS rendering? **Use Puppeteer Crawler**
+Follow this order in figuring out which crawler to use because it's sorted by resource usage.
 
-Follow this order in figuring out which crawler to use, because it goes from the best scenario to the worst one.
+### Best-case scenario
+
+- If you check the `Network` tab in the DevTools, and there are some `json` files, check their response. If the data you want to gather is already there, you have hit the jackpot.
+
+Use an **[HTTP Crawler](#how-to-create-an-http-crawler)**.
+
+### Most common scenario
+
+- Are the only things the user can interact with within the site search related?
+
+Use **[Cheerio Crawler](#how-to-create-cheerio-crawler)**.
+
+### Worst-case scenario
+
+- Does the site have a login?
+- When you go to the next page, there's no update to the site's URL?
+- Were you blocked when using Cheerio Crawler previously?
+
+Use a **[Puppeteer Crawler](#how-to-create-a-puppeteer-crawler)**.
 
 ## Crawler Creation
 
-### How to create HTTP Crawler
+### How to create an HTTP Crawler
 
 Use [Goyabu Crawler](https://github.com/yasse-ofc/yasse-crawlers/tree/main/src/crawlers/http_crawlers/goyabu_crawler) as a template.
 
@@ -104,7 +123,7 @@ await insertOneToDB(COLLECTION_NAME_TO_ADD, {
 });
 ```
 
-### How to create Puppeteer Crawler
+### How to create a Puppeteer Crawler
 
 Use [Lezhinus Crawler](https://github.com/yasse-ofc/yasse-crawlers/tree/main/src/crawlers/puppeteer_crawlers/lezhinus_crawler) as a template.
 
@@ -161,7 +180,7 @@ Some things you should know:
 
 - How to use DevTools in any browser you like
 
-> This is useful to get CSS selectors, find hidden APIs, check if a page is static or dynamic, among other things.
+> This is useful to get CSS selectors, find hidden APIs, and check if a page is static or dynamic, among other things.
 
 - What tools do you need to get the job done
 
@@ -212,4 +231,4 @@ Some things you should know:
 - [Maybe there's a solution here](https://github.com/reanalytics-databoutique/webscraping-open-project)
 - [Ask us](https://github.com/yasse-ofc/yasse-crawlers/issues/4)
 
-**I can't emphasize this enough**: if you can't figure out something, don't be afraid to ask. Creating crawlers is a simple, but very tiring work, and it's the core for this project to work. So, any helping hands are appreciated, even if you know almost nothing about the subject.
+**I can't emphasize this enough**: if you can't figure out something, don't be afraid to ask. Creating crawlers is simple but very tiring work, and it's the core of this project to work. So, any helping hands are appreciated, even if you know almost nothing about the subject.
